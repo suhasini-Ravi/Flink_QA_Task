@@ -44,17 +44,20 @@ public class BaseTest {
 		//Opening the browser and launching application
 		if(prop.getProperty("os").equalsIgnoreCase("windows")) {
 			if(browser.equalsIgnoreCase("chrome")) {
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Browser Drivers\\chromedriver.exe");
 				driver = new ChromeDriver();
 				driver.manage().deleteAllCookies();
 				driver.manage().window().maximize();
 				test.log(LogStatus.INFO, "Launched the browser: "+browser);
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			}else if(browser.equalsIgnoreCase("ie")) {
+				System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\Browser Drivers\\IEDriverServer.exe");
 				driver = new InternetExplorerDriver();
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				driver.manage().window().maximize();
 				test.log(LogStatus.INFO, "Launched the browser: "+browser);
 			}else if(browser.equalsIgnoreCase("firefox")) {
+				System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\Browser Drivers\\geckodriver.exe");
 				driver = new FirefoxDriver();
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				driver.manage().window().maximize();
@@ -68,6 +71,7 @@ public class BaseTest {
 				driver.manage().window().maximize();
 				test.log(LogStatus.INFO, "Launched the browser: "+browser);
 			}else if(browser.equalsIgnoreCase("firefox")) {
+				System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"/Browser Drivers/geckodriver");
 				driver = new FirefoxDriver();
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				driver.manage().window().maximize();
