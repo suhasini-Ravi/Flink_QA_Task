@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Flink_E2E_Suite">
+    <test thread-count="2" name="WeatherShopper">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.flink.tests.EndtoEnd_TC1"/>
+        </classes>
+    </test>
+</suite>

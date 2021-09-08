@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Flink_Parallel_Suite">
+    <test thread-count="5" parallel="tests" name="ChromeTest">
+        <parameter name="browser" value="Chrome" />
+        <classes>
+            <class name="com.flink.tests.EndtoEnd_TC1" />
+        </classes>
+    </test> <!-- ChromeTest -->
+
+    <test thread-count="5" parallel="tests" name="FirefoxTest">
+        <parameter name="browser" value="Firefox" />
+        <classes>
+            <class name="com.flink.tests.EndtoEnd_TC1" />
+        </classes>
+    </test>
+</suite>

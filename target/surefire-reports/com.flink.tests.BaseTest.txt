@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.flink.tests.BaseTest
+-------------------------------------------------------------------------------
+Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.294 s - in com.flink.tests.BaseTest
