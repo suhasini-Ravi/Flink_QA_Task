@@ -62,6 +62,7 @@ public class BaseTest {
 			}
 		}else if(prop.getProperty("os").equalsIgnoreCase("mac")) {
 			if(browser.equalsIgnoreCase("chrome")) {
+				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Browser Drivers/chromedriver");
 				driver = new ChromeDriver();
 				driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 				driver.manage().window().maximize();
